@@ -6,7 +6,8 @@
 </head>
 
 <body>
-
+    
+    <div id='reset'><button id='resetBtn'>reset</button></div>
     <div id="gridContainer">
     </div>
 
@@ -17,15 +18,27 @@
     const gridContainer = document.querySelector('#gridContainer');
     
 
-
-
-
-           //creates 256 divs (might be useless)
+//creates 256 divs
     for( i=0; i < 256; i++){
         let grid = document.createElement('div');
-        grid.setAttribute('class', `grid`)
+        grid.setAttribute('class', `grid`);
+//adds the event listeners for mouse over and mouse leave
+        grid.addEventListener("click", () => {
+            grid.classList.toggle('hoverOn')
+    });
+
+//adds the div 
         gridContainer.appendChild(grid);
     }
+
+    const grid = document.querySelector('.grid');
+
+    const resetBtn = document.querySelector('#resetBtn');
+    resetBtn.addEventListener("click", () => {
+        
+        grid.classList.remove('hoverOn')
+    });
+
 
 
 </script>

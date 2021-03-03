@@ -1,11 +1,12 @@
 
+
 #gridContainer{
     display: grid;
     border: 1px solid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     padding: 0;
-    margin: 0;
+    margin: auto;
     height: 500px;
     width: 500px;
     
@@ -18,4 +19,15 @@
     padding: 0;
     margin: 0;
   
+}
+
+.hoverOn{
+    background-color: darkred;
+}
+#reset{
+    display:flex;
+    justify-content: center;
+}
+#resetBtn{
+    height: 50px;
 }
